@@ -1,7 +1,7 @@
 %html
 	%head
 		%meta{:charset => "utf-8"}
-		%title sinatra-rack-vlad-template
+		%title GPS Satellite Visualiser
 		%meta{:name => "description", :content => ""}
 		%meta{:name => "author", :content => ""}
 
@@ -35,7 +35,6 @@
 
 
 
-
 		/ Placed at the end of the document so the pages load faster
 		%script{ :type => "text/javascript", :src =>"/bootstrap/js/jquery.js"}
 		%script{ :type => "text/javascript", :src =>"/bootstrap/js/basic/bootstrap-transition.js"}
@@ -50,3 +49,7 @@
 		%script{ :type => "text/javascript", :src =>"/bootstrap/js/basic/bootstrap-collapse.js"}
 		%script{ :type => "text/javascript", :src =>"/bootstrap/js/basic/bootstrap-carousel.js"}
 		%script{ :type => "text/javascript", :src =>"/bootstrap/js/basic/bootstrap-typeahead.js"}
+
+		%script{ :type => "text/javascript", :src =>"https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"}
+
+		%script{ :type => "text/javascript", :src =>"/scripts/application.js"}
