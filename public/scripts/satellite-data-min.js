@@ -81,7 +81,7 @@ gpsData=[
          },
          {
             "number":"03",
-            "elevation":"12",
+            "elevation":"5",
             "azimuth":"130",
             "snr":""
          },
@@ -111,7 +111,7 @@ gpsData=[
          },
          {
             "number":"19",
-            "elevation":"34",
+            "elevation":"45",
             "azimuth":"132",
             "snr":"15"
          },

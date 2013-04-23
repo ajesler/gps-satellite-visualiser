@@ -1,12 +1,19 @@
-%script{ :type => "text/javascript", :src =>"/scripts/satellite-data.js"}
+%script{ :type => "text/javascript", :src =>"/scripts/satellite-data-full.js"}
+%script{ :type => "text/javascript", :src =>"/scripts/moment.min.js"}
 
 .container
 	.row
-		.span9
-			%p Control buttons will go here...
-
-	%hr
+		.span12
+			%div{ :class => "well form-inline" }
+				%button{ :class => "btn btn-primary", :onclick => "heatmap()"} Heatmap
+				%span.hspacer &nbsp;
+				%button{ :class => "btn btn-primary", :onclick => "animate()"} Animate
+				with interval
+				%input{ :type => "text", :value => "1000", :id => "timeInterval", :class => "span1" }
+				%span.add-on ms
+				%span.hspacer &nbsp;
+				%button{ :class => "btn btn-primary", :onclick => "togglePlayPause(this)"} Play/Pause
 
 	.row
-		.span9
+		.span12
 			#map-canvas

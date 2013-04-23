@@ -18,7 +18,7 @@ task :process_gps_log, :gps_file do |t, args|
 	end
 
 	output_file = 'data/output/satellite-data.json'
-	File.open(output_file, 'w') { |file| file.write("gpsData="+dataPoints.to_json) }
+	File.open(output_file, 'w') { |file| file.write("gpsData=#{dataPoints.to_json};") }
 
 	puts "Created output file #{output_file}"
 end
@@ -112,7 +112,7 @@ def epoch_from_gprmc_data(data)
 	datetime = "#{date} #{time} UTC"
 
 	date =  DateTime.strptime(datetime, "%d%m%y %H%M%S %Z")
-	date.to_time.to_i unless date.nil?
+	date.to_time.to_i*1000 unless date.nil?
 end
 
 def latLngToDecimal(coord, ref)

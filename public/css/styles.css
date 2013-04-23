@@ -4,6 +4,11 @@ body {
 }
 
 #map-canvas {
-	height: 700px;
+	height: 800px;
 	background: #AAAAAA;
+}
+
+.hspacer {
+	margin-left: 10px;
+	margin-right: 10px;
 }
